@@ -16,5 +16,5 @@ test:
   override:
     - mkdir -p ./results
     - ./test/test.sh
-    - cp ./results/* $CIRCLE_TEST_REPORTS
+    - find ./results -iname '*.xml' -exec cp {} $CIRCLE_TEST_REPORTS \;
 
