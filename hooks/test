@@ -1,0 +1,5 @@
+#!/bin/bash -xe
+
+. ./hooks/env
+
+docker run $IMAGE_NAME -V
