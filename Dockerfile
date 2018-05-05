@@ -8,7 +8,8 @@ RUN apk add --no-cache libcrypto1.0 libssl1.0 openssl-dev curl git build-base ba
   git clone --branch ${VERSION} --single-branch https://github.com/edenhill/kafkacat.git kafkacat &&\
   cd kafkacat &&\
   ./bootstrap.sh &&\
-  make install
+  make install &&\
+  strip /usr/local/bin/kafkacat
 
 FROM alpine:3.7
 
